@@ -1,0 +1,13 @@
+{{ partial "header" . }}
+{{ partial "nav" . }}
+<section class="section">
+  <div class="container">
+    <h2 class="subtitle is-6">{{ .Date.Format "January 2, 2006" }}</h2>
+    <h1 class="title">{{ .Title }}</h1>
+    <div class="content">
+      {{ .Content }}
+    </div>
+  </div>
+</section>
+{{ partial "disqus" . }}
+{{ partial "footer" . }}
