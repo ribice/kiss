@@ -7,7 +7,7 @@
       <h2 class="subtitle is-6">{{ .Date.Format "January 2, 2006" }}</h2>
       <h1 class="title"><a href="{{ .Permalink }}">{{ .Title }}</a>{{ if .Draft }} ::Draft{{ end }}</h1>
       <div class="content">
-        {{ .Summary | plainify }}
+        {{ .Summary | plainify | safeHTML }}
         {{ if .Truncated }}
         ...<a class="button is-link" href="{{ .Permalink }}" style="height:28px">
           Read more
