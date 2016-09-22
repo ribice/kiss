@@ -42,6 +42,13 @@ html
   &.notfound
     font-size: 20vw
 
+code
+  color: inherit
+  background-color: transparent
+  font-size: 90%
+
+
+
 article+article
   margin-top: 80px
 
@@ -53,6 +60,8 @@ article+article
     &::before
       color: #aeb1b5
       font-weight: bold
+    code
+      background-color: #f8f8f8
   h1+h2:not(:first-child),
   h2+h3:not(:first-child),
   h3+h4:not(:first-child),
@@ -109,3 +118,7 @@ article+article
       font-size: 90%
       padding: 1em
       line-height: 1.5
+  li
+    pre,
+    table
+      margin-bottom: 1.5em
