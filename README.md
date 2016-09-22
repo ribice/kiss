@@ -2,7 +2,7 @@
 
 Hemingway is a really minimal blog theme for hugo.
 
-![](images/tn.png)
+![](https://github.com/tanksuzuki/hemingway/blob/master/images/tn.png)
 
 ## Getting Started
 
