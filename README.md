@@ -26,7 +26,7 @@ Copy the `config.toml` in the root directory of your website. Overwrite the exis
 __[config.toml](https://github.com/tanksuzuki/hemingway/blob/master/exampleSite/config.toml)__:
 
 ```toml
-baseurl = "http://replace-this-with-your-hugo-site.com"
+baseurl = "https://example.com"
 languageCode = "en"
 title = "Hemingway"
 theme = "hemingway"
