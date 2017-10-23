@@ -1,25 +1,44 @@
 baseurl = "https://example.com"
 languageCode = "en"
-title = "Hemingway"
-theme = "hemingway"
-copyright = "&copy; <a href=\"https://github.com/tanksuzuki\">Asuka Suzuki</a> 2016"
+title = "Hugo Kiss theme"
+theme = "kiss"
+copyright = "&copy; <a href=\"https://github.com/ribice\">Emir Ribic</a> 2017"
 disqusShortname = "shortname"
 googleAnalytics = ""
+# Number of posts per page
+Paginate = 5
+enableRobotsTXT = true 
 
-[params]
 
-[params.highlight]
-style = "github"
-languages = ["go", "dockerfile"]
+[params.assets]
+customCSS = ["css/custom.css"]
 
-[[params.social]]
-url = "https://github.com/tanksuzuki"
-fa_icon = "fa-github"
+[params.info]
+adsense = "" # Adsense ID (ID only, without ca-pub-)
+enableSocial = true # Adds OpenGraph and Twitter cards
+homeTitle = "" # Title for home page
+poweredby = true # Adds powered by hugo and kiss below Copyright
 
-[[params.social]]
-url = "https://twitter.com/tanksuzuki"
-fa_icon = "fa-twitter"
+[params.opengraph.facebook]
+admins = [] # array of Facebook IDs
+appID = ""
+pageID = ""
 
-[[params.social]]
-url = "/index.xml"
-fa_icon = "fa-rss"
+[params.opengraph.twitter]
+page = "" # Twitter Page username. If not set, params.social.twitter will be used.
+
+[params.social]
+
+twitter = "ribicemir"
+github = "ribice"
+email = "ribice@gmail.com"
+linkedin = "ribice"
+facebook = "ribice"
+instagram = ""
+codepen = ""
+
+[taxonomies]
+tag ="tags"
+
+[blackfriday]
+hrefTargetBlank = true

@@ -1,13 +1,13 @@
 <section class="section">
   <div class="container has-text-centered">
     <p>{{ .Site.Copyright | safeHTML }}</p>
+    {{if .Site.Params.Info.poweredby}}
+      <p>Powered by <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/ribice/kiss">Kiss</a>.</p>
+    {{ end }}
   </div>
 </section>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
-{{ range .Site.Params.highlight.languages }}
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/languages/{{ . }}.min.js"></script>
-{{ end }}
-<script>hljs.initHighlightingOnLoad();</script>
 {{ if .Site.GoogleAnalytics }}
 {{ template "_internal/google_analytics_async.html" . }}
 {{ end }}
+</body>
+</html>

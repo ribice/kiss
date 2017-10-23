@@ -2,11 +2,22 @@
 {{ partial "nav" . }}
 <section class="section">
   <div class="container">
+    <div class="subtitle is-6 is-pulled-right">
+      {{ if .Params.tags }}
+      {{ partial "tags" .Params.tags }}
+      {{ end }}
+    </div>
     <h2 class="subtitle is-6">{{ .Date.Format "January 2, 2006" }}</h2>
     <h1 class="title">{{ .Title }}</h1>
+    {{ if and (.Site.Params.Info.adsense) (.Params.adsenseTop) }}
+    {{ partial "adsense" . }}  
+    {{ end }}  
     <div class="content">
       {{ .Content }}
     </div>
+    {{ if and (.Site.Params.Info.adsense)  (.Params.adsenseBottom) }}
+    {{ partial "adsense" . }}   
+    {{ end}}
   </div>
 </section>
 {{ partial "disqus" . }}

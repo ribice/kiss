@@ -1,12 +1,19 @@
 <!DOCTYPE html>
-<html{{ with .Site.LanguageCode }} lang="{{ . }}"{{ end }}>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{{ .Title }}{{ if eq .IsHome false }} | {{ .Site.Title }}{{ end }}</title>
-<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/style.css">
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-{{ with .Site.Params.highlight.style }}
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/{{ . }}.min.css">
+<html xmlns="http://www.w3.org/1999/xhtml" {{ with .Site.LanguageCode }} lang="{{ . }}"{{ end }}>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+{{ if eq .IsHome false }}
+<title>{{ .Title }} | {{ .Site.Title }}</title>
 {{ else }}
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/default.min.css">
+<title>{{ .Site.Params.Info.homeTitle }}</title>
 {{ end }}
+{{ if .Site.Params.Info.enableSocial }}
+{{- partial "social/opengraph" . -}}
+{{ end }}
+<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/style.css"/>
+{{- range .Site.Params.Assets.customCSS -}}
+<link rel='stylesheet' href='{{ . | relURL }}'>
+{{- end -}}
+</head>
+<body>
