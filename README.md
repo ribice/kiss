@@ -1,8 +1,10 @@
 # Kiss
 
-Kiss is a really minimal blog theme for Hugo. It's a fork of [Hemingway theme](https://github.com/tanksuzuki/hemingway) - [read why](https://ribice.ba/hugo-kiss).
+![](https://www.ribice.ba/img/2/hugo-kiss.png)
 
-![](https://github.com/tanksuzuki/ribice/blob/master/images/bck.png)
+Kiss is a stupidly simple blog theme for Hugo. It's a fork of [Hemingway theme](https://github.com/tanksuzuki/hemingway) - [read why](https://www.ribice.ba/blog/hugo-kiss/).
+
+![](https://github.com/ribice/kiss/blob/master/images/screenshot.png)
 
 ## Getting Started
 
@@ -93,18 +95,12 @@ To align images, add #c for center, #r/l for right/left.
 
 ## Single Page Configuration
 
-```toml
+```
 tags: ["Android", "Apple", "iPhone"] # Adds tags to the post
 cover: https://example.com/img/1/image.jpg # Cover used for OpenGraph and Twitter Cards
 adsenseTop: true # If adsense property is set (params.info.adsense) include an ad above content
 adsenseBottom: true # If adsense property is set (params.info.adsense) include an ad below content
 ```
-
-## ToDo
-
-- [ ] Add support for multiple authors
-- [ ] Add documentation to exampleSite
-- [ ] Add sorting for social buttons
 
 ## Build
 
