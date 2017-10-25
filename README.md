@@ -74,7 +74,7 @@ tag ="tags"
 hrefTargetBlank = true
 ```
 
-To change color of titles, add in static/custom.css
+To change color of titles, add in static/css/custom.css
 
 ```css
 .content h1,
