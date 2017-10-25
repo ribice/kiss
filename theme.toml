@@ -2,7 +2,7 @@ name = "Kiss"
 license = "MIT"
 licenselink = "https://github.com/ribice/kiss/master/LICENSE.md"
 description = "A minimal Hugo blog theme"
-homepage = "https://kiss.netlify.com"
+homepage = "https://www.ribice.ba/blog/hugo-kiss/"
 tags = [
   "blog",
   "minimal",
