@@ -1,4 +1,4 @@
-baseurl = "https://example.com"
+baseurl = "https://www.example.com"
 languageCode = "en"
 title = "Hugo Kiss theme"
 theme = "kiss"
@@ -15,9 +15,9 @@ customCSS = ["css/custom.css"]
 
 [params.info]
 adsense = "" # Adsense ID (ID only, without ca-pub-)
-enableSocial = true # Adds OpenGraph and Twitter cards
+enableSocial = false # Adds OpenGraph and Twitter cards
 homeTitle = "" # Title for home page
-poweredby = true # Adds powered by hugo and kiss below Copyright
+poweredby = true # Adds powered by Hugo and Kiss below Copyright section
 
 [params.opengraph.facebook]
 admins = [] # array of Facebook IDs
