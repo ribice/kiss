@@ -1,7 +1,5 @@
 # Kiss
 
-[Demo site](https://themes.gohugo.io/theme/kiss/)
-
 ![](https://www.ribice.ba/img/2/hugo-kiss.png)
 
 Kiss is a stupidly simple blog theme for Hugo. It's a fork of [Hemingway theme](https://github.com/tanksuzuki/hemingway) - [read why](https://www.ribice.ba/blog/hugo-kiss/).
