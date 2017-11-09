@@ -1,5 +1,7 @@
 # Kiss
 
+[Demo site](https://themes.gohugo.io/theme/kiss/)
+
 ![](https://www.ribice.ba/img/2/hugo-kiss.png)
 
 Kiss is a stupidly simple blog theme for Hugo. It's a fork of [Hemingway theme](https://github.com/tanksuzuki/hemingway) - [read why](https://www.ribice.ba/blog/hugo-kiss/).
@@ -37,7 +39,7 @@ disqusShortname = "shortname"
 googleAnalytics = ""
 # Number of posts per page
 Paginate = 5
-enableRobotsTXT = true 
+enableRobotsTXT = true
 
 
 [params.assets]
@@ -111,6 +113,7 @@ hugo server
 You can go to localhost:1313 and this theme should be visible.
 
 ## License
+
 Kiss is licensed under the MIT license. Check the [LICENSE](LICENSE.md) file for details.
 
 The following resources are included in the theme:
@@ -118,4 +121,5 @@ The following resources are included in the theme:
 - [Feather](https://feather.netlify.com/) by Cole Bemis - Licensed under the [MIT License](https://github.com/colebemis/feather/blob/master/LICENSE).
 
 ## Author
+
 [Emir Ribic](https://github.com/ribice)
