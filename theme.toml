@@ -2,7 +2,7 @@ name = "Kiss"
 license = "MIT"
 licenselink = "https://github.com/ribice/kiss/master/LICENSE.md"
 description = "Stupidly simple Hugo blogging theme"
-homepage = "https://www.ribice.ba/blog/hugo-kiss/"
+homepage = "https://www.ribice.ba/hugo-kiss/"
 tags = [
   "blog",
   "minimal",
