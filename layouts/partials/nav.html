@@ -21,10 +21,10 @@
       </div>
     </nav>
 
-    {{ if (isset .Site.Params "sections" ) }}
-      <nav class="nav">
+    <nav class="nav">
+      {{ if (isset .Site.Params "sections_left" ) }}
         <div class="nav-left">
-          {{- range $section, $printable := .Site.Params.sections -}}
+          {{- range $section, $printable := .Site.Params.sections_left -}}
             {{- if $printable -}}
               <a class="nav-item" href="{{$section}}">
                 <h2 class="title is-5">{{$printable}}</h2>
@@ -32,7 +32,20 @@
             {{- end -}}
           {{- end -}}
         </div>
-      </nav>
-    {{ end }}
+      {{ end }}
+
+      {{ if (isset .Site.Params "sections_right" ) }}
+        <div class="nav-right">
+          {{- range $section, $printable := .Site.Params.sections_right -}}
+            {{- if $printable -}}
+              <a class="nav-item" href="{{$section}}">
+                <h2 class="title is-5">{{$printable}}</h2>
+              </a>
+            {{- end -}}
+          {{- end -}}
+        </div>
+      {{ end }}
+    </nav>
+
   </div>
 </section>
