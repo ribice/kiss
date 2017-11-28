@@ -20,5 +20,17 @@
         </nav>
       </div>
     </nav>
+
+    <nav class="nav">
+      <div class="nav-left">
+        {{ range first 5 .Data.Pages }}
+            {{ if (isset .Params "static" ) }}
+                {{ if eq .Params.Static true }}
+                    <a class="nav-item" href="{{ .Permalink }}"><h6 class="title is-6">{{ .Title }}</h6></a>
+                {{ end }}
+            {{ end }}
+        {{ end }}
+      </div>
+    </nav>
   </div>
 </section>
