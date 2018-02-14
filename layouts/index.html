@@ -4,6 +4,11 @@
   <div class="container">
     {{ range sort .Paginator.Pages }}
     <article>
+      <div class="subtitle is-6 is-pulled-right">
+        {{ if .Params.tags }}
+        {{ partial "tags" .Params.tags }}
+        {{ end }}
+      </div>
       <h2 class="subtitle is-6">{{ .Date.Format "January 2, 2006" }}</h2>
       <h1 class="title"><a href="{{ .Permalink }}">{{ .Title }}</a>{{ if .Draft }} ::Draft{{ end }}</h1>
       <div class="content">
