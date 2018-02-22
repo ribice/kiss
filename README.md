@@ -48,6 +48,8 @@ adsense = "" # Adsense ID (ID only, without ca-pub-)
 enableSocial = true # Adds OpenGraph and Twitter cards
 homeTitle = "" # Title for home page
 poweredby = true # Adds powered by hugo and kiss below Copyright
+related = true # Includes related articles at the bottom of the article
+
 
 [params.opengraph.facebook]
 admins = [] # array of Facebook IDs
@@ -92,6 +94,13 @@ To align images, add #c for center, #r/l for right/left.
 ```md
 ![](/img/1/image.jpg#c)
 ```
+
+## Related Articles
+
+To include related articles in the bottom of the content, set params.info.related to true.
+By default up to 5 articles will be shown (can be changed by cloning related.html) and only older ones.
+
+To change the behaviour of how related articles are generated, check [official docs on Related Content](https://gohugo.io/content-management/related/).
 
 ## Single Page Configuration
 

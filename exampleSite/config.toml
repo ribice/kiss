@@ -18,6 +18,7 @@ adsense = "" # Adsense ID (ID only, without ca-pub-)
 enableSocial = false # Adds OpenGraph and Twitter cards
 homeTitle = "" # Title for home page
 poweredby = true # Adds powered by Hugo and Kiss below Copyright section
+related = true # Includes related articles
 
 [params.opengraph.facebook]
 admins = [] # array of Facebook IDs
@@ -42,3 +43,4 @@ tag ="tags"
 
 [blackfriday]
 hrefTargetBlank = true
+
