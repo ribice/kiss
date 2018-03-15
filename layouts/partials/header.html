@@ -13,7 +13,7 @@
 {{ end }}
 <link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css"/>
 {{- range .Site.Params.Assets.customCSS -}}
-<link rel='stylesheet' href='{{ . | relURL }}'>
+<link rel='stylesheet' href='{{ . | absURL }}'>
 {{- end -}}
 </head>
 <body>
