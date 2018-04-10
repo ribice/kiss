@@ -21,16 +21,18 @@
       </div>
     </nav>
 
-    <nav class="nav">
-      <div class="nav-left">
-        {{ range first 5 .Data.Pages }}
-            {{ if (isset .Params "static" ) }}
-                {{ if eq .Params.Static true }}
-                    <a class="nav-item" href="{{ .Permalink }}"><h6 class="title is-6">{{ .Title }}</h6></a>
-                {{ end }}
-            {{ end }}
-        {{ end }}
-      </div>
-    </nav>
+    {{ if (isset .Site.Params "sections" ) }}
+      <nav class="nav">
+        <div class="nav-left">
+          {{- range $section, $printable := .Site.Params.sections -}}
+            {{- if $printable -}}
+              <a class="nav-item" href="{{$section}}">
+                <h2 class="title is-5">{{$printable}}</h2>
+              </a>
+            {{- end -}}
+          {{- end -}}
+        </div>
+      </nav>
+    {{ end }}
   </div>
 </section>
