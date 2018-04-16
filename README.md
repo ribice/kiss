@@ -95,6 +95,8 @@ To align images, add #c for center, #r/l for right/left.
 ![](/img/1/image.jpg#c)
 ```
 
+Put your own favicons into `/static` and customize `browserconfig.xml` and `site.webmanifest` to fit your needs.
+
 ## Related Articles
 
 To include related articles in the bottom of the content, set params.info.related to true.
