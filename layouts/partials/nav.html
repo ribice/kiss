@@ -20,5 +20,19 @@
         </nav>
       </div>
     </nav>
+
+    {{ if (isset .Site.Params "sections" ) }}
+      <nav class="nav">
+        <div class="nav-left">
+          {{- range $section, $printable := .Site.Params.sections -}}
+            {{- if $printable -}}
+              <a class="nav-item" href="{{$section}}">
+                <h2 class="title is-5">{{$printable}}</h2>
+              </a>
+            {{- end -}}
+          {{- end -}}
+        </div>
+      </nav>
+    {{ end }}
   </div>
 </section>
