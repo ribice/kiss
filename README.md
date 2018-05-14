@@ -95,6 +95,7 @@ To align images, add #c for center, #r/l for right/left.
 ![](/img/1/image.jpg#c)
 ```
 
+
 ## Add sections
 Links can be added to the navbar (bellow the blog name and social links).
 There are two positions:
@@ -111,6 +112,10 @@ There are two positions:
 [params.sections_right]
 "http://example.com/special-page" = "Example"
 ```
+
+## Favicons
+
+Put your own favicons into `/static` and customize `browserconfig.xml` and `site.webmanifest` to fit your needs.
 
 ## Related Articles
 
