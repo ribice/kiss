@@ -95,6 +95,26 @@ To align images, add #c for center, #r/l for right/left.
 ![](/img/1/image.jpg#c)
 ```
 
+
+## Add sections
+Links can be added to the navbar (bellow the blog name and social links).
+There are two positions:
+
+
+- `[params.sections_left]` that will add links in the left side (under the blog title)
+- `[params.sections_right]` that will add links in the right side (under the social links)
+
+```toml
+[params.sections_left]
+"/special-page" = "Special page"
+"https://example.com" = "Example"
+
+[params.sections_right]
+"http://example.com/special-page" = "Example"
+```
+
+## Favicons
+
 Put your own favicons into `/static` and customize `browserconfig.xml` and `site.webmanifest` to fit your needs.
 
 ## Related Articles

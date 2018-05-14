@@ -8,7 +8,7 @@
         <nav class="nav-item level is-mobile">
           {{- range $platform, $username := .Site.Params.social -}}
           {{- if $username -}}
-            <a class="level-item" href='{{ print ( index $.Site.Data.theme.social.base $platform ) $username }}' target='_blank' rel='noopener'>
+            <a class="level-item" aria-label="{{ $platform }}" href='{{ print ( index $.Site.Data.theme.social.base $platform ) $username }}' target='_blank' rel='noopener'>
             <span class="icon">
               <i class>
                 {{- partial "svg/icons" $platform -}}
@@ -20,5 +20,32 @@
         </nav>
       </div>
     </nav>
+
+    <nav class="nav">
+      {{ if (isset .Site.Params "sections_left" ) }}
+        <div class="nav-left">
+          {{- range $section, $printable := .Site.Params.sections_left -}}
+            {{- if $printable -}}
+              <a class="nav-item" href="{{$section}}">
+                <h2 class="title is-5">{{$printable}}</h2>
+              </a>
+            {{- end -}}
+          {{- end -}}
+        </div>
+      {{ end }}
+
+      {{ if (isset .Site.Params "sections_right" ) }}
+        <div class="nav-right">
+          {{- range $section, $printable := .Site.Params.sections_right -}}
+            {{- if $printable -}}
+              <a class="nav-item" href="{{$section}}">
+                <h2 class="title is-5">{{$printable}}</h2>
+              </a>
+            {{- end -}}
+          {{- end -}}
+        </div>
+      {{ end }}
+    </nav>
+
   </div>
 </section>
