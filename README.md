@@ -69,6 +69,10 @@ facebook = "ribice"
 instagram = ""
 codepen = ""
 
+[params.matomoAnalytics]
+siteID = 1
+rootURL = "//matomo.example.com/"
+
 [taxonomies]
 tag ="tags"
 

@@ -1,0 +1,15 @@
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="{{ .Site.Params.matomoAnalytics.rootURL }}";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '{{ .Site.Params.matomoAnalytics.siteID }}']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript>
+  <img src="{{ .Site.Params.matomoAnalytics.rootURL }}piwik.php?idsite={{ .Site.Params.matomoAnalytics.siteID }}&amp;rec=1" style="border:0" alt="" />
+</noscript>
