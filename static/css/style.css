@@ -1149,6 +1149,9 @@ a.box:active {
   margin-right: 2em;
   margin-top: 1em;
 }
+.content p {
+	text-align: justify;
+}
 .content blockquote:not(:last-child),
 .content ol:not(:last-child),
 .content p:not(:last-child),
