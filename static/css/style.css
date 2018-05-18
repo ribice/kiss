@@ -5712,3 +5712,7 @@ img[src$="#r"] {
 .related ul {
   font-size: 17px;
 }
+
+div.subtitle.tags{
+  margin-bottom: 0px;
+}
