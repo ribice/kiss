@@ -24,3 +24,6 @@
 <meta name="theme-color" content="#ffffff">
 </head>
 <body>
+{{ if .Site.Params.matomoAnalytics }}
+{{- partial "analytics/matomo" . -}}
+{{ end }}
