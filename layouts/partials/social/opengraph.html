@@ -10,21 +10,8 @@
   {{- end -}}
 '>
 
-{{- with .Params.Cover -}}
-  {{- $type := ( printf "%T" . ) -}}
-  {{- $isMap := ( not ( eq $type "string" ) ) -}}
-  <meta property='og:image' content='
-    {{- if $isMap -}}
-      {{- .image | absURL -}}
-    {{- else -}}
-      {{- . | absURL -}}
-    {{- end -}}'>
-{{- end -}}
-
-{{- with .Params.images -}}
-  {{- range first 5 . -}}
+{{- with .Params.image -}}
     <meta property='og:image' content='{{ . | absURL }}'>
-  {{- end -}}
 {{- else -}}
 {{- with .Site.Params.Social.email -}}
     <meta property='og:image' content='https://www.gravatar.com/avatar/
