@@ -143,7 +143,7 @@ To change the behaviour of how related articles are generated, check [official d
 
 ```
 tags: ["Android", "Apple", "iPhone"] # Adds tags to the post
-cover: https://example.com/img/1/image.jpg # Cover used for OpenGraph and Twitter Cards
+image: https://example.com/img/1/image.jpg # Cover used for OpenGraph and Twitter Cards
 adsenseTop: true # If adsense property is set (params.info.adsense) include an ad above content
 adsenseBottom: true # If adsense property is set (params.info.adsense) include an ad below content
 hidden: true # If true, page will not be shown in the list view
