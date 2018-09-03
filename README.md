@@ -39,6 +39,11 @@ googleAnalytics = ""
 Paginate = 5
 enableRobotsTXT = true
 
+[params.rss] # Adding this tag enables RSS feed
+
+includeContent = true # Includes whole content in rss
+authorName = "Emir Ribic" # Author full name
+authorEmail = "ribice@gmail.com" # Author email
 
 [params.assets]
 customCSS = ["css/custom.css"]
