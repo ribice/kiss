@@ -106,7 +106,7 @@ To align images, add #c for center, #r/l for right/left.
 
 
 ## Add sections
-Links can be added to the navbar (bellow the blog name and social links).
+Links can be added to the navbar (below the blog name and social links).
 There are two positions:
 
 
