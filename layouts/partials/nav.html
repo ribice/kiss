@@ -17,6 +17,15 @@
           </a>
           {{- end -}}
           {{- end -}}
+          {{- if .Site.Params.mastodon -}}
+          <a class="level-item" aria-label="mastodon" href='{{ print ( index $.Site.Params.mastodon.host ) ( index $.Site.Params.mastodon.username) }}' target='_blank' rel='noopener'>
+            <span class="icon">
+              <i class>
+                {{- partial "svg/icons" "mastodon" -}}
+              </i>
+            </span>
+          </a>
+          {{- end -}}
         </nav>
       </div>
     </nav>

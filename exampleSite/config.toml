@@ -44,6 +44,10 @@ facebook = "ribice"
 instagram = ""
 codepen = ""
 
+[params.mastodon]
+host = "https://social.example.com/"
+username = "@ribice"
+
 [params.matomoAnalytics]
 siteID = 1
 rootURL = "//matomo.example.com/"
