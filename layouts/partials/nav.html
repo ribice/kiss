@@ -17,6 +17,15 @@
           </a>
           {{- end -}}
           {{- end -}}
+          {{- if .Site.Params.gitea -}}
+          <a class="level-item" aria-label="gitea" href='{{ print ( index $.Site.Params.gitea.host ) ( index $.Site.Params.gitea.username) }}' target='_blank' rel='noopener'>
+            <span class="icon">
+              <i class>
+                {{- partial "svg/icons" "gitea" -}}
+              </i>
+            </span>
+          </a>
+          {{- end -}}
         </nav>
       </div>
     </nav>

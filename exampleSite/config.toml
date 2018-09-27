@@ -44,6 +44,10 @@ facebook = "ribice"
 instagram = ""
 codepen = ""
 
+[params.gitea]
+host = "https://git.example.com/"
+username = "ribice"
+
 [params.matomoAnalytics]
 siteID = 1
 rootURL = "//matomo.example.com/"
