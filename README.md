@@ -73,6 +73,7 @@ linkedin = "ribice"
 facebook = "ribice"
 instagram = ""
 codepen = ""
+rss = "index.xml" # Add this to show RSS button in social.
 
 [params.matomoAnalytics]
 siteID = 1
