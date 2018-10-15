@@ -35,12 +35,10 @@ theme = "kiss"
 copyright = "&copy; <a href=\"https://github.com/ribice\">Emir Ribic</a> 2017"
 disqusShortname = "shortname"
 googleAnalytics = ""
-# Number of posts per page
-Paginate = 5
+Paginate = 5 # Number of posts per page
 enableRobotsTXT = true
 
 [params.rss] # Adding this tag enables RSS feed
-
 includeContent = true # Includes whole content in rss
 authorName = "Emir Ribic" # Author full name
 authorEmail = "ribice@gmail.com" # Author email
@@ -65,7 +63,6 @@ pageID = ""
 page = "" # Twitter Page username. If not set, params.social.twitter will be used.
 
 [params.social]
-
 twitter = "ribicemir"
 github = "ribice"
 email = "ribice@gmail.com"
