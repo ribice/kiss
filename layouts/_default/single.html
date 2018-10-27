@@ -7,7 +7,15 @@
       {{ partial "tags" .Params.tags }}
       {{ end }}
     </div>
-    {{if not .Date.IsZero }}<h2 class="subtitle is-6">{{ .Date.Format "January 2, 2006" }}</h2>{{ end }}
+    {{if not .Date.IsZero }}
+    <h2 class="subtitle is-6">
+      {{if .Site.Params.Extend.dateFormat}}
+      {{ .Date.Format ( .Site.Params.Extend.dateFormat) }}
+      {{else}}
+      {{ .Date.Format "January 2, 2006" }}
+      {{end}}
+    </h2>
+    {{ end }}
     <h1 class="title">{{ .Title }}</h1>
     {{ if and (.Site.Params.Info.adsense) (.Params.adsenseTop) }}
     {{ partial "adsense" . }}
@@ -18,7 +26,7 @@
       <div class="related">{{ partial "related" . }}</div>
       {{ end }}
     </div>
-    {{ if and (.Site.Params.Info.adsense)  (.Params.adsenseBottom) }}
+    {{ if and (.Site.Params.Info.adsense) (.Params.adsenseBottom) }}
     {{ partial "adsense" . }}
     {{ end}}
   </div>

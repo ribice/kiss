@@ -2,7 +2,7 @@
   <div class="container has-text-centered">
     <p>{{ .Site.Copyright | safeHTML }}</p>
     {{if .Site.Params.Info.poweredby}}
-      <p>Powered by <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/ribice/kiss">Kiss</a>.</p>
+    <p>Powered by <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/ribice/kiss">Kiss</a>.</p>
     {{ end }}
   </div>
 </section>
@@ -15,5 +15,14 @@
 {{ if .Site.Params.fathomAnalytics }}
 {{- partial "analytics/fathom" . -}}
 {{ end }}
+{{ if .Site.Params.Extend.baiduAnalytics }}
+{{- partial "analytics/baidu" . -}}
+{{ end }}
+{{ if .Site.Params.Highlight.jsurl}}
+<script src="{{.Site.Params.Highlight.jsurl}}"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+{{end}}
+
 </body>
+
 </html>

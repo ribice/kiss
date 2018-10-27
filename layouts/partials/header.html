@@ -1,29 +1,34 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" {{ with .Site.LanguageCode }} lang="{{ . }}"{{ end }}>
+<html xmlns="http://www.w3.org/1999/xhtml" {{ with .Site.LanguageCode }} lang="{{ . }}" {{ end }}>
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-{{ if eq .IsHome false }}
-<title>{{ .Title }} | {{ .Site.Title }}</title>
-{{ else }}
-<title>{{ .Site.Params.Info.homeTitle }}</title>
-{{ end }}
-{{ if .Site.Params.Info.enableSocial }}
-{{- partial "social/opengraph" . -}}
-{{ end }}
-{{ if .Site.Params.rss }}
-<link href="{{ .Site.RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-{{ end }}
-<link rel="stylesheet" href="{{ "css/style.css" | relURL }}"/>
-{{- range .Site.Params.Assets.customCSS -}}
-<link rel='stylesheet' href='{{ . | absURL }}'>
-{{- end -}}
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  {{ if eq .IsHome false }}
+  <title>{{ .Title }} | {{ .Site.Title }}</title>
+  {{ else }}
+  <title>{{ .Site.Params.Info.homeTitle }}</title>
+  {{ end }}
+  {{ if .Site.Params.Info.enableSocial }}
+  {{- partial "social/opengraph" . -}}
+  {{ end }}
+  {{ if .Site.Params.rss }}
+  <link href="{{ .Site.RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+  {{ end }}
+  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}" />
+  {{- range .Site.Params.Assets.customCSS -}}
+  <link rel='stylesheet' href='{{ . | absURL }}'>
+  {{- end -}}
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  {{ if .Site.Params.Highlight.cssurl}}
+  <link rel="stylesheet" href="/highlight/styles/monokai.css">
+  {{end}}
 </head>
+
 <body>
