@@ -40,9 +40,13 @@ twitter = "ribicemir"
 github = "ribice"
 email = "ribice@gmail.com"
 linkedin = "ribice"
-facebook = "ribice"
+gitlab = "ribice"
 instagram = ""
 codepen = ""
+facebook = ""
+
+[params.social.config]
+platforms = ["twitter","github","email","email","linkedin","gitlab"]
 
 [params.matomoAnalytics]
 siteID = 1

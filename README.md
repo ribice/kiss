@@ -102,11 +102,20 @@ To align images, add #c for center, #r/l for right/left.
 ![](/img/1/image.jpg#c)
 ```
 
+#### Changing Social Menu Icons Order
+
+ If you want to change the order of the social menu icons, modify the `[params.social.config]` section of your `config.toml` file:
+
+ ```toml
+[params.social.config]
+platforms = ["github","facebook","twitter","instagram","email","codepen","linkedin"]
+```
+
+ The social menu icons will appear in the order you specify in the `platforms` array.
 
 ## Add sections
 Links can be added to the navbar (below the blog name and social links).
 There are two positions:
-
 
 - `[params.sections_left]` that will add links in the left side (under the blog title)
 - `[params.sections_right]` that will add links in the right side (under the social links)
@@ -124,14 +133,14 @@ There are two positions:
 
 It is recommended to put your own favicons
 
-* `apple-touch-icon.png` (180x180)
-* `favicon-32x32.png` (32x32)
-* `favicon-16x16.png` (16x16)
-* `mstile-150x150.png` (150x150)
-* `android-chrome-192x192.png` (192x192)
-* `android-chrome-512x512.png` (512x512)
+- `apple-touch-icon.png` (180x180)
+- `favicon-32x32.png` (32x32)
+- `favicon-16x16.png` (16x16)
+- `mstile-150x150.png` (150x150)
+- `android-chrome-192x192.png` (192x192)
+- `android-chrome-512x512.png` (512x512)
 
-into `/static`. They're easily created via https://realfavicongenerator.net/.
+in `/static` directory. They're easily created via [Favicon Generator](https://realfavicongenerator.net/).
 
 Customize `browserconfig.xml` and `site.webmanifest` to set `theme-color` and `background-color` for example.
 
