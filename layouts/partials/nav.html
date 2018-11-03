@@ -2,13 +2,17 @@
   <div class="container">
     <nav class="nav">
       <div class="nav-left">
-        <a class="nav-item" href="{{ .Site.BaseURL }}"><h1 class="title is-4">{{ .Site.Title }}</h1></a>
+        <a class="nav-item" href="{{ .Site.BaseURL }}">
+          <h1 class="title is-4">{{ .Site.Title }}</h1>
+        </a>
       </div>
       <div class="nav-right">
         <nav class="nav-item level is-mobile">
-          {{- range $platform, $username := .Site.Params.social -}}
-          {{- if $username -}}
-            <a class="level-item" aria-label="{{ $platform }}" href='{{ print ( index $.Site.Data.theme.social.base $platform ) $username }}' target='_blank' rel='noopener'>
+          {{- $social := ( .Site.Params.social ) -}}
+          {{- range $platform := $social.config.platforms -}}
+          {{- with $username := ( index $social $platform ) -}}
+          <a class="level-item" aria-label="{{ $platform }}" href='{{ print ( index $.Site.Data.theme.social.base $platform ) $username }}'
+            target='_blank' rel='noopener'>
             <span class="icon">
               <i class>
                 {{- partial "svg/icons" $platform -}}
@@ -23,27 +27,27 @@
 
     <nav class="nav">
       {{ if (isset .Site.Params "sections_left" ) }}
-        <div class="nav-left">
-          {{- range $section, $printable := .Site.Params.sections_left -}}
-            {{- if $printable -}}
-              <a class="nav-item" href="{{$section}}">
-                <h2 class="title is-5">{{$printable}}</h2>
-              </a>
-            {{- end -}}
-          {{- end -}}
-        </div>
+      <div class="nav-left">
+        {{- range $section, $printable := .Site.Params.sections_left -}}
+        {{- if $printable -}}
+        <a class="nav-item" href="{{$section}}">
+          <h2 class="title is-5">{{$printable}}</h2>
+        </a>
+        {{- end -}}
+        {{- end -}}
+      </div>
       {{ end }}
 
       {{ if (isset .Site.Params "sections_right" ) }}
-        <div class="nav-right">
-          {{- range $section, $printable := .Site.Params.sections_right -}}
-            {{- if $printable -}}
-              <a class="nav-item" href="{{$section}}">
-                <h2 class="title is-5">{{$printable}}</h2>
-              </a>
-            {{- end -}}
-          {{- end -}}
-        </div>
+      <div class="nav-right">
+        {{- range $section, $printable := .Site.Params.sections_right -}}
+        {{- if $printable -}}
+        <a class="nav-item" href="{{$section}}">
+          <h2 class="title is-5">{{$printable}}</h2>
+        </a>
+        {{- end -}}
+        {{- end -}}
+      </div>
       {{ end }}
     </nav>
 
