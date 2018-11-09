@@ -5548,7 +5548,7 @@ a.panel-block:hover {
 }
 code,
 html {
-  background-color: transparent;
+  background-color: #fff;
 }
 .footer a,
 .footer a:visited {
