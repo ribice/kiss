@@ -3,7 +3,7 @@
   <div class="container">
     <aside><div id="disqus_thread"></div></aside>
   {{ if .Site.Params.Features.DisqusOnDemand }}
-    <div id="show_comments"><a id="load_comments">Comments</a></div>
+    <div id="show_comments"><a id="load_comments" class="button is-link">Load comments</a></div>
   {{ end }}
     <script type="text/javascript">
       var disqus_shortname = '{{ .Site.DisqusShortname }}';
