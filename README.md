@@ -72,6 +72,9 @@ instagram = ""
 codepen = ""
 rss = "index.xml" # Add this to show RSS button in social.
 
+[params.social.config]
+platforms = ["github","facebook","twitter","instagram","email","codepen","linkedin"]
+
 [params.matomoAnalytics]
 siteID = 1
 rootURL = "//matomo.example.com/"
