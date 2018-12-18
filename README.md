@@ -53,6 +53,9 @@ homeTitle = "" # Title for home page
 poweredby = true # Adds powered by hugo and kiss below Copyright
 related = true # Includes related articles at the bottom of the article
 
+[params.features]
+disqusOnDemand = true  # Load Disqus comments on click
+
 
 [params.opengraph.facebook]
 admins = [] # array of Facebook IDs
@@ -107,14 +110,14 @@ To align images, add #c for center, #r/l for right/left.
 
 #### Changing Social Menu Icons Order
 
- If you want to change the order of the social menu icons, modify the `[params.social.config]` section of your `config.toml` file:
+If you want to change the order of the social menu icons, modify the `[params.social.config]` section of your `config.toml` file:
 
- ```toml
+```toml
 [params.social.config]
 platforms = ["github","facebook","twitter","instagram","email","codepen","linkedin"]
 ```
 
- The social menu icons will appear in the order you specify in the `platforms` array.
+The social menu icons will appear in the order you specify in the `platforms` array.
 
 ## Add sections
 Links can be added to the navbar (below the blog name and social links).
@@ -153,6 +156,18 @@ To include related articles in the bottom of the content, set params.info.relate
 By default up to 5 articles will be shown (can be changed by cloning related.html) and only older ones.
 
 To change the behaviour of how related articles are generated, check [official docs on Related Content](https://gohugo.io/content-management/related/).
+
+## Disqus Comments
+
+Hugo has a built-in support for [Disqus comments](https://gohugo.io/content-management/comments/#configure-disqus).
+In order to speed up your site full loading time you could load comments only after visitor
+requests them via clicking on the "Show comments" button. Use the following in the configuration to enable
+on demand loading:
+
+```toml
+[params.features]
+disqusOnDemand = true 
+```
 
 ## Single Page Configuration
 

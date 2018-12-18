@@ -2,13 +2,32 @@
 <section class="section">
   <div class="container">
     <aside><div id="disqus_thread"></div></aside>
+  {{ if .Site.Params.Features.DisqusOnDemand }}
+    <div id="show_comments"><a id="load_comments" class="button is-link">Load comments</a></div>
+  {{ end }}
     <script type="text/javascript">
       var disqus_shortname = '{{ .Site.DisqusShortname }}';
-      (function() {
+      function disqus() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      })();
+      }
+  {{ if .Site.Params.Features.DisqusOnDemand }}
+      //Opens comments when linked to directly
+      var hash = window.location.hash.substr(1);
+      if ((hash.length > 8) && (hash.substring(0, 8) === "comment-")) {
+        disqus();
+        document.getElementById("show_comments").style.display = "none";
+      } else {
+        document.getElementById('load_comments').onclick = function() {
+          disqus();
+          document.getElementById("show_comments").style.display = "none";
+        };
+      }
+  {{ else }}
+      disqus();
+  {{ end }}
+
     </script>
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
   </div>
