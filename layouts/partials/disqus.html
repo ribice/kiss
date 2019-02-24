@@ -1,4 +1,4 @@
-{{ if .Site.DisqusShortname }}
+{{ if and (not (eq .Site.DisqusShortname "")) (not .Params.disable_comments) }}
 <section class="section">
   <div class="container">
     <aside><div id="disqus_thread"></div></aside>
