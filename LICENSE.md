@@ -1,6 +1,7 @@
 The MIT License (MIT)
 
 Copyright (c) 2017 Emir Ribic
+
 Copyright (c) 2016 Asuka Suzuki
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
