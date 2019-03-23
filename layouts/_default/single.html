@@ -1,5 +1,8 @@
 {{ partial "header" . }}
 {{ partial "nav" . }}
+{{ if (findRE "class=\"highlight\"" .Content 1) }}
+<script src="/js/copycode.js"></script>
+{{ end  }}
 <section class="section">
   <div class="container">
     <div class="subtitle tags is-6 is-pulled-right">
