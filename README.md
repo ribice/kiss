@@ -52,6 +52,7 @@ enableSocial = true # Adds OpenGraph and Twitter cards
 homeTitle = "" # Title for home page
 poweredby = true # Adds powered by hugo and kiss below Copyright
 related = true # Includes related articles at the bottom of the article
+codeCopy = true # Add copy button above code blocks
 
 [params.features]
 disqusOnDemand = true  # Load Disqus comments on click
