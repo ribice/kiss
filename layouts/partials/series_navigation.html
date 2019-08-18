@@ -1,0 +1,52 @@
+{{ if .Params.series }}
+    {{ $.Scratch.Add "cur_page_num" 1 }}
+    {{ $.Scratch.Add "total_page_num" 0 }}
+    {{ range where .Site.RegularPages.ByDate "Params.series" .Params.series }}
+        {{ $.Scratch.Add "total_page_num" 1 }}
+        {{ if gt $.Date.Unix .Date.Unix }}
+            {{ $.Scratch.Add "cur_page_num" 1 }}
+            {{ $.Scratch.Set "prev_link" .Permalink }}
+            {{ $.Scratch.Set "prev_title" .Title }}
+        {{ end }}
+    {{ end }}
+    {{ range where .Site.RegularPages.ByDate.Reverse "Params.series" .Params.series }}
+        {{ $.Scratch.Set "first_link" .Permalink }}
+        {{ if lt $.Date.Unix .Date.Unix }}
+            {{ $.Scratch.Set "next_link" .Permalink }}
+            {{ $.Scratch.Set "next_title" .Title }}
+        {{ end }}
+    {{ end }}
+    {{ if or ($.Scratch.Get "next_link") ($.Scratch.Get "prev_link") }}
+        <hr/>
+        <p>Part
+            {{ $.Scratch.Get "cur_page_num" }}
+            of
+            {{ $.Scratch.Get "total_page_num" }}
+            in the
+            <b>{{ .Params.series }}</b>
+            series.</p>
+        <p>
+            {{ if $.Scratch.Get "prev_link" }}
+                {{ if ne ($.Scratch.Get "prev_link") ($.Scratch.Get "first_link") }}
+                    <a href="{{ $.Scratch.Get "first_link" }}">
+                        <i class="fa fa-angle-left"></i>Series Start<i class="fa fa-angle-right"></i>
+                    </a>
+                    |
+                {{ end }}
+                {{ if $.Scratch.Get "prev_link" }}
+                    <a href="{{ $.Scratch.Get "prev_link" }}">
+                        <i class="fa fa-angle-double-left"></i>
+                        {{ $.Scratch.Get "prev_title" }}</a>
+                {{ end }}
+            {{ end }}
+            {{ if and ($.Scratch.Get "next_link") ($.Scratch.Get "prev_link") }}
+                |
+            {{ end }}
+            {{ if $.Scratch.Get "next_link" }}
+                <a href="{{ $.Scratch.Get "next_link" }}">{{ $.Scratch.Get "next_title" }}<i class="fa fa-angle-double-right"></i>
+                </a>
+            </p>
+        {{ end }}
+    {{ end }}
+    <hr>
+    {{ end }}
