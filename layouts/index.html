@@ -2,12 +2,9 @@
 {{ partial "nav" . }}
 <section class="section">
   <div class="container">
-    {{ $pages := .Pages }}
-    {{ if .IsHome }}
-    {{ $pages = .Site.RegularPages }}
-    {{ end }}
-    {{ $paginator := .Paginate $pages }}
-    {{ range .Paginator.Pages }}
+    {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+    {{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
+    {{ range $paginator.Pages }}
     <article>
       <div class="subtitle tags is-6 is-pulled-right">
         {{ if .Params.tags }}
