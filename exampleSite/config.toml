@@ -8,6 +8,7 @@ googleAnalytics = ""
 # Number of posts per page
 Paginate = 5
 enableRobotsTXT = true
+mainSections = ["post"]
 
 [params.features]
 disqusOnDemand = true  # Load Disqus comments on click
