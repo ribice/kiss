@@ -2,9 +2,8 @@
 {{ partial "nav" . }}
 <section class="section">
   <div class="container">
-    {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
-    {{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
-    {{ range $paginator.Pages }}
+    {{ $paginator := .Paginate (where .Site.RegularPages "Params.hidden" "ne" true) }}
+    {{ range sort .Paginator.Pages }}
     <article>
       <div class="subtitle tags is-6 is-pulled-right">
         {{ if .Params.tags }}
