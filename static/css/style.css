@@ -5267,6 +5267,13 @@ a.nav-item.is-tab.is-active {
   z-index: 2;
 }
 
+@media (max-width:767px) {
+  .nav {
+    display: grid;
+    grid-template-columns: auto;
+  }
+}
+
 .panel-heading,
 .tabs.is-boxed a:hover,
 a.panel-block:hover {
