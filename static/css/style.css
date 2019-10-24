@@ -5267,11 +5267,9 @@ a.nav-item.is-tab.is-active {
   z-index: 2;
 }
 
-@media (max-width:767px) {
-  .nav {
-    display: grid;
-    grid-template-columns: auto;
-  }
+.nav-shifted {
+  display: grid !important;
+  grid-template-columns: auto !important;
 }
 
 .panel-heading,
