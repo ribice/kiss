@@ -1,13 +1,13 @@
 <section class="section">
   <div class="container">
-    <nav class="nav">
-      <div class="nav-left">
-        <a class="nav-item" href="{{ .Site.BaseURL }}">
-          <h1 class="title is-4">{{ .Site.Title }}</h1>
+    <nav id="nav-main" class="nav">
+      <div id="nav-name" class="nav-left">
+        <a id="nav-anchor" class="nav-item" href="{{ .Site.BaseURL }}">
+          <h1 id="nav-heading" class="title is-4">{{ .Site.Title }}</h1>
         </a>
       </div>
       <div class="nav-right">
-        <nav class="nav-item level is-mobile">
+        <nav id="nav-items" class="nav-item level is-mobile">
           {{- $social := ( .Site.Params.social ) -}}
           {{- range $platform := $social.config.platforms -}}
           {{- with $username := ( index $social $platform ) -}}
@@ -52,4 +52,5 @@
     </nav>
 
   </div>
+  <script src="/js/navicon-shift.js"></script>
 </section>
