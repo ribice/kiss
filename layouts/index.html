@@ -2,7 +2,10 @@
 {{ partial "nav" . }}
 <section class="section">
   <div class="container">
-    {{ $paginator := .Paginate (where .Site.RegularPages "Params.hidden" "ne" true) }}
+    {{- $pctx := . -}}
+    {{- if .IsHome -}}{{ $pctx = .Site }}{{- end -}}
+    {{- $pages := $pctx.RegularPages -}}
+    {{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
     {{ range sort .Paginator.Pages }}
     <article>
       <div class="subtitle tags is-6 is-pulled-right">
