@@ -1,0 +1,13 @@
+{{if .Site.Params.Info.taxonomiesCount}}
+{{ $title := urlize .Title }}
+  {{ range $taxonomy_name, $taxonomy := .Site.Taxonomies }}
+    {{ if eq $.Section $taxonomy_name}}
+      {{ range $key, $value := $taxonomy }}
+        {{ $term := urlize $key }}
+        {{ if eq $title $term }}
+          ({{ $value.Count }})
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
