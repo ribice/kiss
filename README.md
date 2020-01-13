@@ -83,6 +83,9 @@ platforms = ["github","facebook","twitter","instagram","email","codepen","linked
 siteID = 1
 rootURL = "//matomo.example.com/"
 
+[params.fathomAnalytics]
+rootURL = "//fathom.example.com/"
+
 [taxonomies]
 tag ="tags"
 
