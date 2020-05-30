@@ -2,9 +2,12 @@
 {{ partial "nav" . }}
 <section class="section">
   <div class="container">
-    {{- $pctx := . -}}
-    {{- if .IsHome -}}{{ $pctx = .Site }}{{- end -}}
-    {{- $pages := $pctx.RegularPages -}}
+    {{- $pages := . -}}
+    {{- if .IsHome -}}
+    {{- $pages = .Site.RegularPages -}}
+    {{- else -}}
+    {{ $pages = .Pages -}}
+    {{- end -}}
     {{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
     {{ range sort .Paginator.Pages }}
     <article>
