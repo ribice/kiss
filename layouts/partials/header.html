@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" {{ with .Site.LanguageCode }} lang="{{ . }}"{{ end }}>
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 {{ if eq .IsHome false }}
 <title>{{ .Title }} | {{ .Site.Title }}</title>
 {{ else }}
@@ -12,9 +12,9 @@
 {{- partial "social/opengraph" . -}}
 {{ end }}
 {{ if .Site.Params.rss }}
-<link href="{{ .Site.RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+<link href="{{ .Site.RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}">
 {{ end }}
-<link rel="stylesheet" href="{{ "css/style.css" | relURL }}"/>
+<link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
 {{- range .Site.Params.Assets.customCSS -}}
 <link rel='stylesheet' href='{{ . | absURL }}'>
 {{- end -}}
