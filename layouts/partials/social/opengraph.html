@@ -50,21 +50,21 @@
 {{- $dateFormat := "2006-01-02T15:04:05Z07:00" -}}
 {{- if .IsPage -}}
   {{- if not .PublishDate.IsZero -}}
-    <meta property='article:published_time' content='{{ .PublishDate.Format $dateFormat }}'/>
+    <meta property='article:published_time' content='{{ .PublishDate.Format $dateFormat }}'>
   {{- else if not .Date.IsZero -}}
-    <meta property='article:published_time' content='{{ .Date.Format $dateFormat }}'/>
+    <meta property='article:published_time' content='{{ .Date.Format $dateFormat }}'>
   {{- end -}}
 
   {{- if not .Lastmod.IsZero -}}
-    <meta property='article:modified_time' content='{{ .Lastmod.Format $dateFormat }}'/>
+    <meta property='article:modified_time' content='{{ .Lastmod.Format $dateFormat }}'>
   {{- end -}}
 
   {{- if not .ExpiryDate.IsZero -}}
-    <meta property='article:expiration_time' content='{{ .ExpiryDate.Format $dateFormat }}'/>
+    <meta property='article:expiration_time' content='{{ .ExpiryDate.Format $dateFormat }}'>
   {{- end -}}
 {{- else -}}
   {{- if not .Site.LastChange.IsZero -}}
-    <meta property='og:updated_time' content='{{ .Site.LastChange.Format $dateFormat }}'/>
+    <meta property='og:updated_time' content='{{ .Site.LastChange.Format $dateFormat }}'>
   {{- end -}}
 {{- end -}}
 
