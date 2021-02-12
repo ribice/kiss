@@ -18,7 +18,7 @@ button,
 input[type="button"],
 input[type="file"],
 input[type="submit"],
-label {
+{
   cursor: pointer;
 }
 
@@ -1399,9 +1399,9 @@ a.box:active {
   list-style: decimal;
 }
 
-.content ul {
+/* .content ul {
   list-style: disc;
-}
+} */
 
 .content ul ul {
   list-style-type: circle;

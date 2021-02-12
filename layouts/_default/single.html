@@ -3,9 +3,9 @@
 <section class="section">
   <div class="container">
     <div class="subtitle tags is-6 is-pulled-right">
-      {{ if .Params.tags }}
+      <!-- {{ if .Params.tags }}
       {{ partial "tags" .Params.tags }}
-      {{ end }}
+      {{ end }} -->
     </div>
     {{if not .Date.IsZero }}<h2 class="subtitle is-6">{{ .Date.Format "January 2, 2006" }}</h2>{{ end }}
     <h1 class="title">{{ .Title }}</h1>

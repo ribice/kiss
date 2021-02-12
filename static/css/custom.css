@@ -1,0 +1,123 @@
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+    color: #827394;
+}
+
+.content h1 {
+    color: black;
+}
+
+a:hover, a:visited, a:link, a:active
+{
+    border-bottom-style: none !important;
+}
+
+.content a:not(.button) {
+    color: #847bb9;
+}
+
+.content a:not(.button):hover {
+    border-bottom-color: #847bb9;
+}
+
+h1 > a:not(.button) {
+    color: black !important;
+}
+
+h1 >  a:not(.button):hover {
+    border-bottom-color: black !important;
+}
+
+h1:not(:first-child) {
+    margin-top: 0px !important;
+}
+
+ul.task-list {
+    list-style: none !important;
+}
+
+.content ul {
+    list-style: none !important;
+}
+
+video {
+    width: 100%    !important;
+    height: auto   !important;
+}
+
+
+/* Gallery Wishlist
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 8px;
+}*/
+
+/* Create 2 equal columns that sits next to each other
+.column {
+    flex: 50%;
+    max-width: 50%;
+    padding: 0 8px;
+}
+
+.column img {
+    margin-top: 16px;
+    vertical-align: middle;
+    width: 100%;
+}*/
+
+/* Responsive layout - makes a two column-layout instead of four columns
+@media screen and (max-width: 800px) {
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+}*/
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other
+@media screen and (max-width: 600px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+}*/
+
+
+/* Gallery Wishlist */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 8px;
+  }
+
+/* Create 2 equal columns that sits next to each other */
+.column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 8px;
+}
+
+.column img {
+    margin-top: 16px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .column {
+        flex: 25%;
+        max-width: 25%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
