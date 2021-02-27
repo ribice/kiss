@@ -45,6 +45,7 @@ authorEmail = "ribice@gmail.com" # Author email
 
 [params.assets]
 customCSS = ["css/custom.css"]
+googleFonts = []
 
 [params.info]
 adsense = "" # Adsense ID (ID only, without ca-pub-)
