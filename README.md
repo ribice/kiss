@@ -57,6 +57,8 @@ taxonomiesCount = true # Add taxonomies count
 
 [params.features]
 disqusOnDemand = true  # Load Disqus comments on click
+mathjax = false
+katex = false
 
 
 [params.opengraph.facebook]
