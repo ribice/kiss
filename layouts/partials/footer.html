@@ -15,5 +15,9 @@
 {{ if .Site.Params.fathomAnalytics }}
 {{- partial "analytics/fathom" . -}}
 {{ end }}
+
+{{ if .Site.Params.hotjarAnalytics}}
+{{- partial "analytics/hotjar" . -}}
+{{ end }}
 </body>
 </html>

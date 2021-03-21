@@ -87,6 +87,9 @@ rootURL = "//matomo.example.com/"
 [params.fathomAnalytics]
 rootURL = "//fathom.example.com/"
 
+[params.hotjarAnalytics]
+hjid = 1
+
 [taxonomies]
 tag ="tags"
 
@@ -171,7 +174,7 @@ on demand loading:
 
 ```toml
 [params.features]
-disqusOnDemand = true 
+disqusOnDemand = true
 ```
 
 ## Single Page Configuration
