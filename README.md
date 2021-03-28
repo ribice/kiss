@@ -90,6 +90,9 @@ rootURL = "//fathom.example.com/"
 [params.hotjarAnalytics]
 hjid = 1
 
+[params.clarityAnalytics]
+id = 1
+
 [taxonomies]
 tag ="tags"
 
