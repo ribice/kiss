@@ -1,0 +1,22 @@
+{{ $images := .Resources.Match "gallery/*.jpg"}}
+
+{{if $images}}
+
+<div class="gallery">
+
+{{ range $gallery_item := $images }}
+    {{ $gallery_item_thumbnail := $gallery_item.Resize "x500 q80" }}
+    <a data-fslightbox data-type="image" href="{{ $gallery_item.RelPermalink }}">
+        <img src="{{ $gallery_item_thumbnail.RelPermalink }}"/>
+    </a>
+{{ end }}
+
+</div>
+
+<script src="/js/fslightbox.js"></script>
+<script>
+    fsLightbox.props.loadOnlyCurrentSource = true;
+</script>
+<link rel="stylesheet" href="/css/fslightbox-kiss.css">
+
+{{end}}

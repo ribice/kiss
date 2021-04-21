@@ -17,11 +17,14 @@
       {{ if .Site.Params.Info.related }}
       <div class="related">{{ partial "related" . }}</div>
       {{ end }}
+      {{ if .Params.gallery }}
+      {{ partial "gallery" . }}
+      {{ end}}
     </div>
     {{ if and (.Site.Params.Info.adsense)  (.Params.adsenseBottom) }}
     {{ partial "adsense" . }}
     {{ end}}
-  </div>
+  </div>  
 </section>
 {{ if (and (.Site.Params.Info.codeCopy) (findRE "<pre" .Content 1)) }}
     <script src="/js/copycode.js"></script>
