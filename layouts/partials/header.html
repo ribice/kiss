@@ -6,7 +6,7 @@
 {{ if eq .IsHome false }}
 <title>{{ .Title }} | {{ .Site.Title }}</title>
 {{ else }}
-<title>{{ .Site.Params.Info.homeTitle }}</title>
+<title>{{ .Site.Title }}</title>
 {{ end }}
 {{ if .Site.Params.Info.enableSocial }}
 {{- partial "social/opengraph" . -}}
