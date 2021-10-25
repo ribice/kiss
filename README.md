@@ -90,6 +90,9 @@ rootURL = "//fathom.example.com/"
 [params.hotjarAnalytics]
 hjid = 1
 
+[params.plausibleAnalytics]
+domain = ribice.ba
+
 [taxonomies]
 tag ="tags"
 

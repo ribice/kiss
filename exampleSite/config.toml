@@ -57,6 +57,9 @@ rootURL = "//matomo.example.com/"
 [params.fathomAnalytics]
 rootURL = "//fathom.example.com/"
 
+[params.plausibleAnalytics]
+domain = "plausible.com"
+
 [taxonomies]
 tag ="tags"
 

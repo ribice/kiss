@@ -15,9 +15,11 @@
 {{ if .Site.Params.fathomAnalytics }}
 {{- partial "analytics/fathom" . -}}
 {{ end }}
-
 {{ if .Site.Params.hotjarAnalytics}}
 {{- partial "analytics/hotjar" . -}}
+{{ end }}
+{{ if .Site.Params.plausibleAnalytics}}
+{{- partial "analytics/plausible" . -}}
 {{ end }}
 </body>
 </html>
