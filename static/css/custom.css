@@ -48,6 +48,9 @@ video {
     height: auto   !important;
 }
 
+.content p>code, .content>code {
+    border: none !important;
+}
 
 /* Gallery Wishlist*/
 .row {
