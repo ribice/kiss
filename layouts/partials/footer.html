@@ -7,7 +7,7 @@
   </div>
 </section>
 {{ if .Site.GoogleAnalytics }}
-{{ template "_internal/google_analytics_async.html" . }}
+{{ template "_internal/google_analytics.html" . }}
 {{ end }}
 {{ if .Site.Params.matomoAnalytics }}
 {{- partial "analytics/matomo" . -}}
