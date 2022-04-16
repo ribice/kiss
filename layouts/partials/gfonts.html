@@ -1,0 +1,10 @@
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link
+  href="https://fonts.googleapis.com/css2?family=
+{{- range $index, $font := .Site.Params.Assets.googleFonts -}}
+    {{- if $index -}}&family={{- end -}}
+    {{ $font }}
+{{- end -}}
+&display=swap"
+  rel="stylesheet"
+/>

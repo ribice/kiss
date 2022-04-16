@@ -45,6 +45,7 @@ authorEmail = "ribice@gmail.com" # Author email
 
 [params.assets]
 customCSS = ["css/custom.css"]
+googleFonts = []
 
 [params.info]
 adsense = "" # Adsense ID (ID only, without ca-pub-)
@@ -57,6 +58,8 @@ taxonomiesCount = true # Add taxonomies count
 
 [params.features]
 disqusOnDemand = true  # Load Disqus comments on click
+mathjax = false
+katex = false
 
 
 [params.opengraph.facebook]
