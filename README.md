@@ -71,6 +71,7 @@ pageID = ""
 page = "" # Twitter Page username. If not set, params.social.twitter will be used.
 
 [params.social]
+mastodon = "mastodon.instance/@ribice"
 twitter = "ribicemir"
 github = "ribice"
 email = "ribice@gmail.com"
@@ -128,7 +129,7 @@ If you want to change the order of the social menu icons, modify the `[params.so
 
 ```toml
 [params.social.config]
-platforms = ["github","facebook","twitter","instagram","email","codepen","linkedin"]
+platforms = ["github","facebook","mastodon","twitter","instagram","email","codepen","linkedin"]
 ```
 
 The social menu icons will appear in the order you specify in the `platforms` array.
