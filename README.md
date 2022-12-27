@@ -189,6 +189,8 @@ disqusOnDemand = true
 ```
 tags: ["Android", "Apple", "iPhone"] # Adds tags to the post
 image: https://example.com/img/1/image.jpg # Cover used for OpenGraph and Twitter Cards
+css: https://example.com/css/pagestyle.css # Include additional CSS stylesheet
+js: https://example.com/js/script.js # Include JS file
 adsenseTop: true # If adsense property is set (params.info.adsense) include an ad above content
 adsenseBottom: true # If adsense property is set (params.info.adsense) include an ad below content
 hidden: true # If true, page will not be shown in the list view
