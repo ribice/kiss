@@ -1,27 +1,30 @@
 {{ partial "header" . }}
 {{ partial "nav" . }}
 <section class="section">
-  <div class="container">
-    <div class="subtitle tags is-6 is-pulled-right">
-      {{ if .Params.tags }}
-      {{ partial "tags" .Params.tags }}
-      {{ end }}
+    <div class="container">
+        <div class="subtitle tags is-6 is-pulled-right">
+            {{ if .Params.tags }}
+                {{ partial "tags" .Params.tags }}
+            {{ end }}
+        </div>
+        {{if not .Date.IsZero }}
+            <h2 class="subtitle is-6">{{ .Date.Format "January 2, 2006" }}</h2>
+        {{ end }}
+        <h1 class="title">{{ .Title }}</h1>
+        {{ if and (.Site.Params.Info.adsense) (.Params.adsenseTop) }}
+            {{ partial "adsense" . }}
+        {{ end }}
+        <div class="content">
+            {{ .Content }}
+            {{ partial "series_navigation.html" . }}
+            {{ if .Site.Params.Info.related }}
+                <div class="related">{{ partial "related" . }}</div>
+            {{ end }}
+        </div>
+        {{ if and (.Site.Params.Info.adsense)  (.Params.adsenseBottom) }}
+            {{ partial "adsense" . }}
+        {{ end}}
     </div>
-    {{if not .Date.IsZero }}<h2 class="subtitle is-6">{{ .Date.Format "January 2, 2006" }}</h2>{{ end }}
-    <h1 class="title">{{ .Title }}</h1>
-    {{ if and (.Site.Params.Info.adsense) (.Params.adsenseTop) }}
-    {{ partial "adsense" . }}
-    {{ end }}
-    <div class="content">
-      {{ .Content }}
-      {{ if .Site.Params.Info.related }}
-      <div class="related">{{ partial "related" . }}</div>
-      {{ end }}
-    </div>
-    {{ if and (.Site.Params.Info.adsense)  (.Params.adsenseBottom) }}
-    {{ partial "adsense" . }}
-    {{ end}}
-  </div>
 </section>
 {{ if (and (.Site.Params.Info.codeCopy) (findRE "<pre" .Content 1)) }}
     <script src="/js/copycode.js"></script>
