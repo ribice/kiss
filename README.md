@@ -55,6 +55,7 @@ poweredby = true # Adds powered by hugo and kiss below Copyright
 related = true # Includes related articles at the bottom of the article
 codeCopy = true # Add copy button above code blocks
 taxonomiesCount = true # Add taxonomies count
+dateFormat = "01/02" # Change dateFormat. DO NOT CHANGE THE NUMBER
 
 [params.features]
 disqusOnDemand = true  # Load Disqus comments on click
