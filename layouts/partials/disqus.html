@@ -1,4 +1,4 @@
-{{ if and (not (eq .Site.DisqusShortname "")) (not .Params.disable_comments) }}
+{{ if and (not (eq .Site.Config.Services.Disqus.Shortname "")) (not .Params.disable_comments) }}
 <section class="section">
   <div class="container">
     <aside><div id="disqus_thread"></div></aside>
@@ -6,7 +6,7 @@
     <div id="show_comments"><a id="load_comments" class="button is-link">Load comments</a></div>
   {{ end }}
     <script type="text/javascript">
-      var disqus_shortname = '{{ .Site.DisqusShortname }}';
+      var disqus_shortname = '{{ .Site.Config.Services.Disqus.Shortname }}';
       function disqus() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
