@@ -5,8 +5,11 @@ theme = "kiss"
 copyright = "&copy; <a href=\"https://github.com/ribice\">Emir Ribic</a> 2017"
 disqusShortname = "shortname"
 googleAnalytics = ""
-pagination.pagerSize = 5 # Number of posts per page
 enableRobotsTXT = true
+
+[pagination]
+  # Number of articles per page
+  pagerSize = 15
 
 [params.rss] # Adding this tag enables RSS feed
 includeContent = true # Includes whole content in rss
