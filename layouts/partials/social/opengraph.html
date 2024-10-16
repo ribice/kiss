@@ -11,70 +11,70 @@
 '>
 
 {{- with .Params.image -}}
-    <meta property='og:image' content='{{ . | absURL }}'>
+<meta property='og:image' content='{{ . | absURL }}'>
 {{- else -}}
 {{- with .Site.Params.Social.email -}}
-    <meta property='og:image' content='https://www.gravatar.com/avatar/
+<meta property='og:image' content='https://www.gravatar.com/avatar/
         {{- . | md5 -}}
         ?s=256'>
 {{- end -}}
 
 {{- with .Params.audios -}}
-  {{- range first 6 . -}}
-    <meta property='og:audio' content='{{ . | absURL }}'>
-  {{- end -}}
+{{- range first 6 . -}}
+<meta property='og:audio' content='{{ . | absURL }}'>
+{{- end -}}
 {{- end -}}
 
 {{- with .Params.videos -}}
-  {{- range first 6 . -}}
-    <meta property='og:video' content='{{ . | absURL }}'>
-  {{- end -}}
+{{- range first 6 . -}}
+<meta property='og:video' content='{{ . | absURL }}'>
+{{- end -}}
 {{- end -}}
 
 {{- if .IsPage -}}
-    {{- with .Site.Params.Social.facebook -}}
-      <meta property='article:author' content='https://facebook.com/{{ . }}'>
-    {{- end -}}
-  {{- end -}}
+{{- with .Site.Params.Social.facebook -}}
+<meta property='article:author' content='https://facebook.com/{{ . }}'>
+{{- end -}}
+{{- end -}}
 
-  {{- with .Site.Params.opengraph.facebook.pageid -}}
-    <meta property='article:publisher' content='{{ . }}'>
-  {{- end -}}
+{{- with .Site.Params.opengraph.facebook.pageid -}}
+<meta property='article:publisher' content='{{ . }}'>
+{{- end -}}
 
-  <meta property='article:section' content='{{- .Section | title -}}'>
-  {{- range .Params.tags -}}
-    <meta property='article:tag' content='{{ . }}'>
-  {{- end -}}
+<meta property='article:section' content='{{- .Section | title -}}'>
+{{- range .Params.tags -}}
+<meta property='article:tag' content='{{ . }}'>
+{{- end -}}
 {{- end -}}
 
 {{- $dateFormat := "2006-01-02T15:04:05Z07:00" -}}
 {{- if .IsPage -}}
-  {{- if not .PublishDate.IsZero -}}
-    <meta property='article:published_time' content='{{ .PublishDate.Format $dateFormat }}'>
-  {{- else if not .Date.IsZero -}}
-    <meta property='article:published_time' content='{{ .Date.Format $dateFormat }}'>
-  {{- end -}}
+{{- if not .PublishDate.IsZero -}}
+<meta property='article:published_time' content='{{ .PublishDate.Format $dateFormat }}'>
+{{- else if not .Date.IsZero -}}
+<meta property='article:published_time' content='{{ .Date.Format $dateFormat }}'>
+{{- end -}}
 
-  {{- if not .Lastmod.IsZero -}}
-    <meta property='article:modified_time' content='{{ .Lastmod.Format $dateFormat }}'>
-  {{- end -}}
+{{- if not .Lastmod.IsZero -}}
+<meta property='article:modified_time' content='{{ .Lastmod.Format $dateFormat }}'>
+{{- end -}}
 
-  {{- if not .ExpiryDate.IsZero -}}
-    <meta property='article:expiration_time' content='{{ .ExpiryDate.Format $dateFormat }}'>
-  {{- end -}}
+{{- if not .ExpiryDate.IsZero -}}
+<meta property='article:expiration_time' content='{{ .ExpiryDate.Format $dateFormat }}'>
+{{- end -}}
 {{- else -}}
-  {{- if not .Site.LastChange.IsZero -}}
-    <meta property='og:updated_time' content='{{ .Site.LastChange.Format $dateFormat }}'>
-  {{- end -}}
+{{- if not .Site.Lastmod.IsZero -}}
+<meta property='og:updated_time' content='{{ .Site.Lastmod.Format $dateFormat }}'>
+{{- end -}}
 {{- end -}}
 
 {{- with .Site.Params.opengraph.facebook -}}
-  {{- with .appid -}}
-    <meta property='fb:app_id' content='{{ . }}'>
-  {{- end -}}
-  {{- range .admins -}}
-    <meta property='fb:admins' content='{{ . }}'>
-  {{- end -}}
+{{- with .appid -}}
+<meta property='fb:app_id' content='{{ . }}'>
+{{- end -}}
+{{- range .admins -}}
+<meta property='fb:admins' content='{{ . }}'>
+{{- end -}}
 {{- end -}}
 
 {{- partial "social/twitter" . -}}
