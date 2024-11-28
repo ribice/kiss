@@ -2,7 +2,7 @@
 
 ![](https://www.ribice.ba/img/2/hugo-kiss.png)
 
-Kiss is a stupidly simple blog theme for Hugo. It's a fork of [Hemingway theme](https://github.com/tanksuzuki/hemingway) - [read why](https://www.ribice.ba/hugo-kiss/).
+Kiss is a stupidly simple blog theme for Hugo. It's a fork of [Hemingway theme](https://github.com/tanksuzuki/hemingway) - [read why](https://www.dev.ribic.ba/hugo-kiss/).
 
 ![](https://github.com/ribice/kiss/blob/master/images/screenshot.png)
 
