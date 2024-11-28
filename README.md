@@ -214,4 +214,4 @@ The following resources are included in the theme:
 
 ## Author
 
-[Emir Ribic](https://github.com/ribice)
+[Emir Ribic](https://dev.ribic.ba)
