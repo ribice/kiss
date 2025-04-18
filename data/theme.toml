@@ -1,4 +1,5 @@
 [social.base]
+bluesky = 'https://bsky.app/profile/'
 codepen = 'https://codepen.io/'
 email =  'mailto:'
 facebook = 'https://facebook.com/'
